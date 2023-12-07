@@ -19,10 +19,10 @@ pipeline {
     }
     stage('Support') {
       agent {
-        docker { image 'node:16-alpine' }
+        docker { image 'maven:3.8.1-adoptopenjdk-11' }
       }
       steps {
-        sh 'node --version'
+        sh 'mvn --version'
       }
     }
   }
